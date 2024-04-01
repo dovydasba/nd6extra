@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darbuotojų aplikacija</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        #shoppingList {
+            text-align: center;
+            list-style-type: none;
+        }
+        #average {
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Darbuotojų sąrašas</h1>
+            <input type="text" id="item" placeholder="Vardas Pavarde">
+            <input type="number" id="quantity" placeholder="atlygnimas" min="1">
+            <button onclick="addItem()">Pridėti</button>
+        </div>
+        <ul id="workersList"></ul>
+        <button onclick="deleteList()">trinti viską</button>
+        <p id="average"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
